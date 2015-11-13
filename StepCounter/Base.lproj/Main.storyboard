@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dar-af-wlL">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--StepCounter-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="StepCounter" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y5s-32-GVh" customClass="GraphView">
+                                <rect key="frame" x="0.0" y="424" width="600" height="112"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="112" id="wgb-mV-Ktp"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to begin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="a31-4J-rfu">
+                                <rect key="frame" x="20" y="155" width="560" height="27"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQY-hF-CIu">
+                                <rect key="frame" x="20" y="254" width="560" height="29"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="a31-4J-rfu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-100" id="6Dn-Gg-ySB"/>
+                            <constraint firstItem="wQY-hF-CIu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="6u2-hj-j9Y"/>
+                            <constraint firstAttribute="trailing" secondItem="y5s-32-GVh" secondAttribute="trailing" id="9vL-TE-ORr"/>
+                            <constraint firstItem="y5s-32-GVh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="OMZ-bl-E1j"/>
+                            <constraint firstItem="wQY-hF-CIu" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ri8-oY-gFU"/>
+                            <constraint firstItem="wQY-hF-CIu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="WMu-oO-WXa"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="y5s-32-GVh" secondAttribute="bottom" id="Wvb-6i-fSu"/>
+                            <constraint firstItem="a31-4J-rfu" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="c4p-D8-coD"/>
+                            <constraint firstItem="a31-4J-rfu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="dvK-cT-azl"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="StepCounter" id="eL8-d2-4Y0"/>
+                    <connections>
+                        <outlet property="graphView" destination="y5s-32-GVh" id="9Sc-kl-s2D"/>
+                        <outlet property="instructionLabel" destination="a31-4J-rfu" id="xkD-F9-yg9"/>
+                        <outlet property="stepsLabel" destination="wQY-hF-CIu" id="8i9-DW-Tks"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1051" y="1017"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k5q-l4-RHx">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dar-af-wlL" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" barStyle="black" translucent="NO" id="Mpa-zv-zbV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.047058823530000002" green="0.30980392159999998" blue="0.56470588239999997" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="nlN-qE-mDE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Etf-D4-EdP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="308" y="1017"/>
+        </scene>
+    </scenes>
+    <color key="tintColor" red="0.98431372549999996" green="0.63921568630000003" blue="0.23529411759999999" alpha="1" colorSpace="calibratedRGB"/>
+</document>
